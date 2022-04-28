@@ -1,0 +1,38 @@
+//PAGE MEDIA
+
+.grid-container {
+    main {
+        .portada-media {
+            img {
+                width: 200px;
+                height: 200px;
+                margin-bottom: 40px;
+
+                #carrusel-1,
+                #carrusel-2 {
+                    margin-top: 50px;
+                    font-weight: bolder;
+                }
+
+            }
+        }
+    }
+}
+
+section{
+    .standard{
+        background-color: map-get($map: $standard, $key: bgc-standard);
+        color: map-get($map: $standard, $key: color-standard);
+        border: map-get($map: $standard, $key: border-standard);
+        padding: map-get($map: $standard, $key: padding-standard);
+        margin: map-get($map: $standard, $key: margin-standard);
+    }
+    .premium{
+        background-color: map-get($map: $premium, $key: bgc-premium);
+        color: map-get($map: $premium, $key: color-premium);
+        border: map-get($map: $premium, $key: border-premium);
+        padding: map-get($map: $premium, $key: padding-premium);
+        margin: map-get($map: $premium, $key: margin-premium);
+
+    }
+}

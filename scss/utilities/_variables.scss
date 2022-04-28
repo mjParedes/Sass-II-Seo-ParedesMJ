@@ -1,0 +1,82 @@
+
+//VARIABLES DEL PROYECTO 
+
+$primary-color: #F05454;
+$secondary-color: #E8E8E8;
+$third-color: #96BAFF;
+$soft-green: #C1F4C5;
+$card-f:#FED1EF;
+$card-m: #CAF0F8;
+$bg-nav: #42C2FF;
+
+
+//mixins
+
+@mixin flex($display, $direction,$wrap,$just,$align){
+    display: $display ;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $just;
+    align-items: $align;
+}
+
+
+//maps - los aplico en html Media
+
+$standard: (
+    bgc-standard:#addaad,
+    color-standard: #000,
+    border-standard: 2px solid #000,
+    padding-standard: 20px,
+    margin-standard: 30px,
+);
+
+$premium: (
+    bgc-premium:#4556f4,
+    color-premium: #fff,
+    border-premium: 2px solid #fff,
+    padding-premium: 25px,
+    margin-premium: 15px,
+);
+
+//extends
+
+.card-f{
+    @extend .card;
+    background-color: $card-f;
+    > img{
+        @extend .avatar;
+    }
+    > h4{
+        @extend .title;
+        font-weight: bold;
+        border-bottom: 2px solid rgba(0,0,0,0.2); 
+    }
+    > small{
+        @extend .small;
+        font-weight: bold;
+    }
+}
+
+.card-m{
+    @extend .card;
+    background-color: $card-m;
+    > img{
+        @extend .avatar;
+    }
+    > h4{
+        @extend .title;
+        font-weight: bold;
+        font-style: italic;
+        border-bottom: 2px solid rgba(0,0,0,0.2);
+    }
+    > small{
+        @extend .small;
+        font-weight: bold;
+        font-style: italic;
+       
+    }
+}
+
+
+
